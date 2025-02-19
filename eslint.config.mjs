@@ -15,12 +15,14 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 
-export default tsEslint.config({
+export default tsEslint.config(
+    { ignores: ['components/ui'] },
+    {
   ...compat.extends(
     ...[
       'next/core-web-vitals',
       'next/typescript',
-      'plugin:@next/next/recommended',
+      ...tsEslint.configs.recommended,
     ]
   ),
   files: ['**/*.{ts,tsx}'],
