@@ -8,3 +8,4 @@ export type {
   IPagination,
 } from './common.type';
 export type { ModalType, AlertModalType } from './modal.type';
+export type { TodoType } from './home.type';

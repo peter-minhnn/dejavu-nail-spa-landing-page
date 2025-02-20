@@ -1,8 +1,8 @@
-const LocaleSwitcherMessages = {
+const localeSwitcherMessages = {
   en: 'English',
   vi: 'Vietnamese',
   title: 'Language',
   select: 'Select language',
 };
 
-export default LocaleSwitcherMessages;
+export default localeSwitcherMessages;

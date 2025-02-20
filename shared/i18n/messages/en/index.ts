@@ -1,11 +1,11 @@
-import ErrorMessages from './errors';
-import HomeMessages from './home';
-import LocaleSwitcherMessages from './locales';
-import MetaDataMessages from './meta-data';
+import errorMessages from './errors';
+import homeMessages from './home';
+import localeSwitcherMessages from './locales';
+import metaDataMessages from './meta-data';
 
 export default {
-  MetaDataMessages,
-  ErrorMessages,
-  LocaleSwitcherMessages,
-  HomeMessages,
+  metaDataMessages,
+  errorMessages,
+  localeSwitcherMessages,
+  homeMessages,
 };

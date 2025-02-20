@@ -1,4 +1,4 @@
-const LocaleSwitcherMessages = {
+const localeSwitcherMessages = {
   en: 'Tiếng Anh',
   vi: 'Tiếng Việt',
   ko: 'Tiếng Hàn',
@@ -6,4 +6,4 @@ const LocaleSwitcherMessages = {
   select: 'Chọn ngôn ngữ',
 };
 
-export default LocaleSwitcherMessages;
+export default localeSwitcherMessages;

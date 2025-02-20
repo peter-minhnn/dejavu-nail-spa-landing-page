@@ -1,4 +1,4 @@
-import { homeServices } from '@/features/home/home.service';
+import { homeServices } from '@/services/home.service';
 import { useQuery } from '@tanstack/react-query';
 
 const useGetTodos = ({ id }: { id: number }) => {

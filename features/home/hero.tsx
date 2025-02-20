@@ -3,14 +3,14 @@
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { homeQueries } from '@/features/home/_hooks/use-queries';
-import { TodoType } from '@/types/home.type';
+import { TodoType } from '@/types';
 import { IconRefresh } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import { ReactElement, useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
 
 export default function Hero() {
-  const t = useTranslations('HomeMessages');
+  const t = useTranslations('homeMessages');
   const [todo, setTodo] = useState<TodoType | null>(null);
   const [id, setId] = useState<number>(1);
 
@@ -38,7 +38,7 @@ export default function Hero() {
     if (status === 'pending') return;
     setTodo(data);
     toast.success(t('success'));
-  }, [status, data]);
+  }, [status, data, t]);
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-4">

@@ -1,4 +1,4 @@
-const HomeMessages = {
+const homeMessages = {
   refreshBtn: 'Refresh',
   success: 'Success',
   id: 'ID',
@@ -6,4 +6,4 @@ const HomeMessages = {
   completed: 'Completed',
 };
 
-export default HomeMessages;
+export default homeMessages;

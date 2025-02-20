@@ -1,5 +1,5 @@
-const MetaDataMessages = {
+const metaDataMessages = {
   homeTitle: 'Trang chủ',
 };
 
-export default MetaDataMessages;
+export default metaDataMessages;
