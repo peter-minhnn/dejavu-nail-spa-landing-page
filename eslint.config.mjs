@@ -17,10 +17,7 @@ const compat = new FlatCompat({
 export default tsEslint.config(
   { ignores: ['components/ui'] },
   {
-    extends: [
-      js.configs.recommended,
-      ...tsEslint.configs.recommended,
-    ],
+    extends: [js.configs.recommended, ...tsEslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
