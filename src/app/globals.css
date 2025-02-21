@@ -53,6 +53,10 @@
     --chart-5: 27 87% 67%;
 
     --radius: 0.5rem;
+
+    --main-color: #DFDAD4;
+
+    --main-button-color: #E48E43;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -102,6 +106,10 @@
     --chart-4: 280 65% 60%;
 
     --chart-5: 340 75% 55%;
+
+    --main-color: #DFDAD4;
+
+    --main-button-color: #E48E43;
   }
 }
 
@@ -112,4 +120,29 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .bg-footer {
+    @apply bg-[var(--main-color)];
+  }
+  .main-button {
+    @apply bg-[var(--main-button-color)] text-white;
+  }
+  .active-menu {
+    @apply !text-[var(--main-button-color)];
+  }
+}
+
+/* Navbar */
+.sticky-header {
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.sticky-header.show {
+  transform: translateY(0);
 }

@@ -9,3 +9,4 @@ export type {
 } from './common.type';
 export type { ModalType, AlertModalType } from './modal.type';
 export type { TodoType } from './home.type';
+export type { NavbarType, LanguageType } from './navbar.type';

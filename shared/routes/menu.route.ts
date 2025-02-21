@@ -1,6 +1,8 @@
 export const menuRoutes = {
   home: '/',
   about: '/about',
-  blog: '/blog',
+  services: '/services',
+  training: '/training',
+  products: '/products',
   contact: '/contact',
 };
