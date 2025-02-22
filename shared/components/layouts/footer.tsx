@@ -10,7 +10,7 @@ export function Footer() {
   const legal = ['Terms', 'Privacy', 'Legal'];
   return (
     <div className="bg-footer relative rounded-3xl pb-2">
-      <div className="dark:border-trueGray-700 mx-auto mt-5 grid max-w-screen-xl grid-cols-1 gap-10 border-t border-gray-100 pt-10 lg:grid-cols-5">
+      <div className="mx-auto mt-5 grid max-w-screen-xl grid-cols-1 gap-10 pt-10 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <div>
             {' '}

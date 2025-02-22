@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
   const pathname = usePathname();
-  const [showHeader, setShowHeader] = useState(true);
+  const [showHeader, setShowHeader] = useState<boolean>(true);
+  const [topNum, setTopNum] = useState<number>(0);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -20,6 +21,7 @@ export const Navbar = () => {
         setShowHeader(true);
       }
       lastScrollY = window.scrollY;
+      setTopNum(lastScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -31,8 +33,9 @@ export const Navbar = () => {
 
   return (
     <div
-      className={cn('sticky-header sticky top-0 z-[999] w-full bg-white', {
-        show: showHeader,
+      className={cn('sticky-header sticky top-0 w-full', {
+        'show bg-transparent': showHeader,
+        'z-[999] bg-white': showHeader && topNum > 100,
       })}
     >
       <nav className="container relative mx-auto flex flex-wrap items-center justify-between p-4 lg:justify-between xl:px-1">
@@ -45,7 +48,6 @@ export const Navbar = () => {
               height={48}
               alt="logo"
             />
-            <span>DEJA VU</span>
           </span>
         </Link>
 
@@ -80,14 +82,18 @@ export const Navbar = () => {
           className="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto"
           id="navbar-language"
         >
-          <ul className="mt-4 flex flex-col justify-end rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col justify-end rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
             {navigation.map((menu) => (
               <li key={menu.name}>
                 <Link
                   href={menu.href}
                   className={cn(
-                    'block rounded-sm bg-blue-700 px-3 py-2 text-black md:bg-transparent md:p-0',
-                    { 'active-menu': menu.href === pathname }
+                    'hover:active-menu block rounded-sm bg-blue-700 px-3 py-2 md:bg-transparent md:p-0',
+                    {
+                      'active-menu': menu.href === pathname,
+                      'text-black': showHeader && topNum > 100,
+                      'text-white': showHeader && topNum < 100,
+                    }
                   )}
                 >
                   {menu.name}
