@@ -22,21 +22,21 @@ export default function Home() {
   return (
     <MainLayout pageTitle={tMetaData('homeTitle')}>
       <Banner path="/images/bg-home.png">
-        <div className="absolute left-8 top-1/3 h-full w-full">
+        <div className="absolute left-8 top-1/3 h-auto w-auto">
           <p
             className={`text-8xl font-normal text-white ${yeservaSans.className}`}
           >
             NAIL CARE
           </p>
         </div>
-        <div className="absolute left-[34%] top-96 h-full w-full xl:top-80">
+        <div className="absolute left-[36%] top-80 h-auto w-auto xl:top-72">
           <p
             className={`text-9xl font-normal text-[#FEDE59] ${alluraSans.className}`}
           >
             is
           </p>
         </div>
-        <div className="absolute left-8 top-[60%] h-full w-full md:left-60 xl:top-1/2">
+        <div className="absolute left-8 top-[60%] h-auto w-auto md:left-60 xl:top-[52%]">
           <p
             className={`text-8xl font-normal text-white ${yeservaSans.className}`}
           >
